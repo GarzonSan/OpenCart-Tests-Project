@@ -3,9 +3,9 @@ The OpenCart eCommerce App is a demo eCommerce application by TheTestingAcademy 
 
 ## Documentation
 The following documentation was developed for this project:
-* Test Plan
-* Test Strategy
-* Test Cases
+* [Test Plan](https://github.com/GarzonSan/OpenCart-Tests-Project/blob/main/Test%20Documentation/Test%20Plan%20-%20OpenCart.pdf)
+* [Test Strategy](https://github.com/GarzonSan/OpenCart-Tests-Project/blob/main/Test%20Documentation/Test%20Strategy%20-%20OpenCart.pdf)
+* [Test Cases](https://github.com/GarzonSan/OpenCart-Tests-Project/blob/main/Test%20Cases/Test%20Cases%20-%20OpenCart.xlsx)
 
 ## Objective
 I've chosen this application to increase the chalenges I'll have to overcome during the tests development since it contains different modules with data that must be carried between them, as well as different features that uses this data for different objectives, that are focused on the user experience inside the demo platform.
