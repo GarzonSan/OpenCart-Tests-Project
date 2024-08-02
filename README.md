@@ -25,7 +25,7 @@ This platform will be tested to ensure that the entire E2E purchase scenario is 
 It will be using automated black-box tests to simulate the user's interaction with the platform.
 
 ## Good Practices
-I'm still using the **Page Object Oriented Pattern** to keep the project in the most organized and easy to maintain wait, since this time I'm working with an demo application that have more integrated systems, and keeping things separated this way helps when adapting the tests for new features or design changes in applications like this one.
+I'm still using the **Page Object Oriented Pattern** to keep the project in the most organized and easy to maintain way, since this time I'm working with an demo application that have more integrated systems, and keeping things separated this way helps when adapting the tests for new features or design changes in applications like this one.
 
 ## Final Considerations
 With this project I aiming to being able to explore deeply my knowledge about important QA concepts, while working with a much more complex demo application with E2E scenarios.
