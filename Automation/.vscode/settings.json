@@ -1,0 +1,7 @@
+{
+    "robot.language-server.python": "D:\\Documents\\Test Automation Projects\\OpenCart_App\\OpenCart-Tests-Project\\Automation\\venv\\Scripts\\python.exe",
+    "robot.python.executable": "D:\\Documents\\Test Automation Projects\\OpenCart_App\\OpenCart-Tests-Project\\Automation\\venv\\Scripts\\python.exe",
+    "robot.pythonpath": [
+        "${workspaceFolder}"
+    ]
+}

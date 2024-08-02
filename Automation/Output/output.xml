@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-08-02T16:02:39.649660" rpa="false" schemaversion="5">
+<suite id="s1" name="Main Tests" source="D:\Documents\Test Automation Projects\OpenCart_App\OpenCart-Tests-Project\Automation\Tests\main_tests.robot">
+<kw name="Open Session" owner="generics" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:40.287556" level="INFO">Opening browser 'Chrome' to base url 'https://awesomeqa.com/ui/'.</msg>
+<arg>${base_app_url}</arg>
+<arg>${target_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-02T16:02:40.287556" elapsed="5.884730"/>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:40.286534" elapsed="5.886750"/>
+</kw>
+<test id="s1-t1" name="User Can Register New Accounts" line="9">
+<kw name="Open URL to Page" owner="generics" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:46.174282" level="INFO">Opening url 'https://awesomeqa.com/ui/index.php?route=account/register'</msg>
+<arg>${base_app_url}${url_complement}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-02T16:02:46.174282" elapsed="0.974968"/>
+</kw>
+<arg>${registration_url}</arg>
+<status status="PASS" start="2024-08-02T16:02:46.173284" elapsed="0.975966"/>
+</kw>
+<kw name="Input Valid Data in the Required Fields" owner="registrationPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:47.150247" level="INFO">Typing text 'Fernando' into text field 'xpath://form/fieldset[@id='account']/div/div/input[@name='firstname']'.</msg>
+<arg>${name_field}</arg>
+<arg>${valid_uname_reg}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:47.150247" elapsed="0.095745"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:47.246989" level="INFO">Typing text 'Garzon' into text field 'xpath://form/fieldset[@id='account']/div/div/input[@name='lastname']'.</msg>
+<arg>${sname_field}</arg>
+<arg>${valid_sname_reg}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:47.245992" elapsed="0.063835"/>
+</kw>
+<kw name="Get New Temp Email" owner="UserData">
+<msg time="2024-08-02T16:02:48.093345" level="INFO">${t_mail} = blyawkzmas9@laafd.com</msg>
+<var>${t_mail}</var>
+<status status="PASS" start="2024-08-02T16:02:47.310825" elapsed="0.783417"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-08-02T16:02:48.094242" level="INFO">The temporary email generated for this account is blyawkzmas9@laafd.com</msg>
+<arg>The temporary email generated for this account is ${t_mail}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-08-02T16:02:48.094242" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:48.094242" level="INFO">Typing text 'blyawkzmas9@laafd.com' into text field 'xpath://form/fieldset[@id='account']/div/div/input[@name='email']'.</msg>
+<arg>${email_field}</arg>
+<arg>${t_mail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:48.094242" elapsed="0.073084"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:48.167326" level="INFO">Typing text '11912345678' into text field 'xpath://form/fieldset[@id='account']/div/div/input[@name='telephone']'.</msg>
+<arg>${phone_field}</arg>
+<arg>${valid_phone_reg}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:48.167326" elapsed="0.073617"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:48.240943" level="INFO">Typing password into text field 'xpath://form/fieldset/div[@class='form-group required']/div/input[@name='password']'.</msg>
+<msg time="2024-08-02T16:02:48.270140" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${pw_field}</arg>
+<arg>${valid_test_pword_reg}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:48.240943" elapsed="0.069005"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:48.309948" level="INFO">Typing password into text field 'xpath://form/fieldset/div[@class='form-group required']/div/input[@name='confirm']'.</msg>
+<msg time="2024-08-02T16:02:48.340592" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${pw_confirmation_field}</arg>
+<arg>${valid_test_pword_reg}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:48.309948" elapsed="0.069975"/>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:47.150247" elapsed="1.229676"/>
+</kw>
+<kw name="Accept the Privacy Policy" owner="registrationPage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:48.397148" level="INFO">Element 'xpath://div[@class='buttons']/div/input[@name='agree']' is displayed.</msg>
+<arg>${privacy_policy_checkbox}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-02T16:02:48.380920" elapsed="0.017227"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:48.398147" level="INFO">Clicking element 'xpath://div[@class='buttons']/div/input[@name='agree']'.</msg>
+<arg>${privacy_policy_checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:48.398147" elapsed="0.041911"/>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:48.380920" elapsed="0.059138"/>
+</kw>
+<kw name="Submit the Registration Form" owner="registrationPage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:48.457281" level="INFO">Element 'xpath://div[@class='buttons']/div/input[@type='submit']' is displayed.</msg>
+<arg>${registration_submit_button}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-02T16:02:48.441055" elapsed="0.016226"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:48.458302" level="INFO">Clicking element 'xpath://div[@class='buttons']/div/input[@type='submit']'.</msg>
+<arg>${registration_submit_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:48.457281" elapsed="1.132816"/>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:48.440058" elapsed="1.150039"/>
+</kw>
+<kw name="Can Succesfully Access the Account Page" owner="registrationPage">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:49.591068" level="INFO">Opening url 'https://awesomeqa.com/ui/index.php?route=account/account'</msg>
+<arg>${base_app_url}${account_page_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-02T16:02:49.590097" elapsed="0.536975"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${account_info_verifier}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-02T16:02:50.128070" elapsed="0.020284"/>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:49.590097" elapsed="0.558257"/>
+</kw>
+<kw name="Logoff Current User Account" owner="registrationPage">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:50.152343" level="INFO">${current_url} = https://awesomeqa.com/ui/index.php?route=account/account</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-08-02T16:02:50.149352" elapsed="0.002991"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${current_url}&quot;==&quot;${base_app_url}${account_page_url}&quot;">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:50.153365" level="INFO">Opening url 'https://awesomeqa.com/ui/index.php?route=account/logout'</msg>
+<arg>${base_app_url}${account_logout_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-02T16:02:50.153365" elapsed="0.924670"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-02T16:02:53.078651" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-02T16:02:51.078035" elapsed="2.000616"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${account_logoff_confirmation_text_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-02T16:02:53.078651" elapsed="0.015066"/>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:50.152343" elapsed="2.941374"/>
+</branch>
+<status status="PASS" start="2024-08-02T16:02:50.152343" elapsed="2.941374"/>
+</if>
+<status status="PASS" start="2024-08-02T16:02:50.149352" elapsed="2.945360"/>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:46.173284" elapsed="6.921428"/>
+</test>
+<test id="s1-t2" name="Registration Form Only Accepts Valid Data" line="19">
+<kw name="Open URL to Page" owner="generics" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:53.095710" level="INFO">Opening url 'https://awesomeqa.com/ui/index.php?route=account/register'</msg>
+<arg>${base_app_url}${url_complement}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-02T16:02:53.095710" elapsed="0.506963"/>
+</kw>
+<arg>${registration_url}</arg>
+<status status="PASS" start="2024-08-02T16:02:53.095710" elapsed="0.506963"/>
+</kw>
+<kw name="Input Invalid Data in the Required Fields" owner="registrationPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:53.603671" level="INFO">Typing text 'F3rn4nd0' into text field 'xpath://form/fieldset[@id='account']/div/div/input[@name='firstname']'.</msg>
+<arg>${name_field}</arg>
+<arg>${invalid_uname_reg}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:53.603671" elapsed="0.068016"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:53.671687" level="INFO">Typing text 'G4r30h' into text field 'xpath://form/fieldset[@id='account']/div/div/input[@name='lastname']'.</msg>
+<arg>${sname_field}</arg>
+<arg>${invalid_sname_reg}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:53.671687" elapsed="0.062343"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:53.734030" level="INFO">Typing text 'mail@email' into text field 'xpath://form/fieldset[@id='account']/div/div/input[@name='email']'.</msg>
+<arg>${email_field}</arg>
+<arg>${invalid_email_reg}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:53.734030" elapsed="0.065241"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:53.800269" level="INFO">Typing text '--phone-number--]' into text field 'xpath://form/fieldset[@id='account']/div/div/input[@name='telephone']'.</msg>
+<arg>${phone_field}</arg>
+<arg>${invalid_phone_reg}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:53.799271" elapsed="0.076111"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:53.875382" level="INFO">Typing password into text field 'xpath://form/fieldset/div[@class='form-group required']/div/input[@name='password']'.</msg>
+<msg time="2024-08-02T16:02:53.907253" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${pw_field}</arg>
+<arg>${invalid_test_pword_reg}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:53.875382" elapsed="0.067567"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:53.943947" level="INFO">Typing password into text field 'xpath://form/fieldset/div[@class='form-group required']/div/input[@name='confirm']'.</msg>
+<msg time="2024-08-02T16:02:53.967820" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${pw_confirmation_field}</arg>
+<arg>${invalid_test_pword_reg}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:53.942949" elapsed="0.062235"/>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:53.602673" elapsed="0.402511"/>
+</kw>
+<kw name="Accept the Privacy Policy" owner="registrationPage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:54.019148" level="INFO">Element 'xpath://div[@class='buttons']/div/input[@name='agree']' is displayed.</msg>
+<arg>${privacy_policy_checkbox}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-02T16:02:54.005184" elapsed="0.013964"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:54.019148" level="INFO">Clicking element 'xpath://div[@class='buttons']/div/input[@name='agree']'.</msg>
+<arg>${privacy_policy_checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:54.019148" elapsed="0.035017"/>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:54.005184" elapsed="0.048981"/>
+</kw>
+<kw name="Submit the Registration Form" owner="registrationPage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:54.070049" level="INFO">Element 'xpath://div[@class='buttons']/div/input[@type='submit']' is displayed.</msg>
+<arg>${registration_submit_button}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-02T16:02:54.055156" elapsed="0.014893"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:54.071047" level="INFO">Clicking element 'xpath://div[@class='buttons']/div/input[@type='submit']'.</msg>
+<arg>${registration_submit_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:54.071047" elapsed="0.522489"/>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:54.055156" elapsed="0.538380"/>
+</kw>
+<kw name="Errors Were Raised as Expected" owner="registrationPage">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-02T16:02:55.594876" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-02T16:02:54.594533" elapsed="1.000343"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:55.605846" level="INFO">@{alerts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="32eec7e43933e66dd33b106fd4e1fa17", element="f.83BDAE90C00352E35BA6A76B147ECF88.d.85FC26861AB5A4DA1981AC5AC1C152E8.e.202")&gt; ]</msg>
+<var>@{alerts}</var>
+<arg>${registration_wrong_data_alert_locator}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:55.594876" elapsed="0.010970"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2024-08-02T16:02:55.605846" level="INFO">Length is 1.</msg>
+<msg time="2024-08-02T16:02:55.605846" level="INFO">${list_lenght} = 1</msg>
+<var>${list_lenght}</var>
+<arg>${alerts}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2024-08-02T16:02:55.605846" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-08-02T16:02:55.606843" level="INFO">${alert_counter} = 0</msg>
+<var>${alert_counter}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-08-02T16:02:55.605846" elapsed="0.000997"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-02T16:02:55.606843" level="INFO">${alert_counter} = 0+1</msg>
+<var>${alert_counter}</var>
+<arg>'${alert_counter}+1'</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-02T16:02:55.606843" elapsed="0.000000"/>
+</kw>
+<var name="${alert}">&lt;selenium.webdriver.remote.webelement.WebElement (session="32eec7e43933e66dd33b106fd4e1fa17", element="f.83BDAE90C00352E35BA6A76B147ECF88.d.85FC26861AB5A4DA1981AC5AC1C152E8.e.202")&gt;</var>
+<status status="PASS" start="2024-08-02T16:02:55.606843" elapsed="0.000000"/>
+</iter>
+<var>${alert}</var>
+<value>@{alerts}</value>
+<status status="PASS" start="2024-08-02T16:02:55.606843" elapsed="0.000000"/>
+</for>
+<if>
+<branch type="IF" condition="${list_lenght}&gt;=1">
+<kw name="Pass Execution" owner="BuiltIn">
+<msg time="2024-08-02T16:02:55.607840" level="INFO">Execution passed with message:
+Errors were raised!</msg>
+<arg>Errors were raised!</arg>
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<status status="PASS" start="2024-08-02T16:02:55.606843" elapsed="0.000997">Errors were raised!</status>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:55.606843" elapsed="0.000997">Errors were raised!</status>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2024-08-02T16:02:55.607840" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-08-02T16:02:55.607840" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-08-02T16:02:55.606843" elapsed="0.000997">Errors were raised!</status>
+</if>
+<status status="PASS" start="2024-08-02T16:02:54.593536" elapsed="1.014304">Errors were raised!</status>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:53.095710" elapsed="2.512130">Errors were raised!</status>
+</test>
+<test id="s1-t3" name="Privacy Policy is Succesfully Shown During Registration Process" line="28">
+<kw name="Open URL to Page" owner="generics" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:55.609835" level="INFO">Opening url 'https://awesomeqa.com/ui/index.php?route=account/register'</msg>
+<arg>${base_app_url}${url_complement}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-02T16:02:55.609835" elapsed="0.502621"/>
+</kw>
+<arg>${registration_url}</arg>
+<status status="PASS" start="2024-08-02T16:02:55.609835" elapsed="0.502621"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-08-02T16:02:56.112456" level="INFO">Clicking on Privacy Policy Link</msg>
+<arg>Clicking on Privacy Policy Link</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-08-02T16:02:56.112456" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-02T16:02:56.113454" level="INFO">Clicking element 'xpath://div[@class='buttons']/div/a[@class='agree']'.</msg>
+<arg>${privacy_policy_link_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-02T16:02:56.113454" elapsed="0.053855"/>
+</kw>
+<kw name="Privacy Policy Window Is Being Displayed" owner="registrationPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${privacy_policy_window_locator}</arg>
+<arg>timeout=6</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-02T16:02:56.168307" elapsed="0.434834"/>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:56.168307" elapsed="0.434834"/>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:55.609835" elapsed="0.994304"/>
+</test>
+<kw name="End Session" owner="generics" type="TEARDOWN">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2024-08-02T16:02:56.605136" elapsed="0.025931"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-02T16:02:56.631067" elapsed="2.122731"/>
+</kw>
+<status status="PASS" start="2024-08-02T16:02:56.605136" elapsed="2.148662"/>
+</kw>
+<doc>WIP -- Main Test Suite For the OpenCart Application --</doc>
+<status status="PASS" start="2024-08-02T16:02:39.650636" elapsed="19.103162"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Main Tests">Main Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
