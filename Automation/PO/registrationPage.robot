@@ -41,9 +41,9 @@ Input Valid Data in the Required Fields
     Input Text    ${phone_field}    ${valid_phone_reg}
     # password fields ---
     #     Password
-    Input Password    ${pw_field}    ${valid_test_pword_reg}
+    Input Text    ${pw_field}    ${valid_test_pword_reg}
     #     Verification Password
-    Input Password    ${pw_confirmation_field}    ${valid_test_pword_reg}
+    Input Text    ${pw_confirmation_field}    ${valid_test_pword_reg}
 
 Input Invalid Data in the Required Fields
     # name field
@@ -56,9 +56,9 @@ Input Invalid Data in the Required Fields
     Input Text    ${phone_field}    ${invalid_phone_reg}
     # password fields ---
     #     Password
-    Input Password    ${pw_field}    ${invalid_test_pword_reg}
+    Input Text    ${pw_field}    ${invalid_test_pword_reg}
     #     Verification Password
-    Input Password    ${pw_confirmation_field}    ${invalid_test_pword_reg}
+    Input Text    ${pw_confirmation_field}    ${invalid_test_pword_reg}
 
 Accept the Privacy Policy
     Element Should Be Visible    ${privacy_policy_checkbox}

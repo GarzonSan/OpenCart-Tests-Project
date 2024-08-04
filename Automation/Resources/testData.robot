@@ -13,3 +13,5 @@ ${invalid_sname_reg}    G4r30h
 ${invalid_phone_reg}    --phone-number--]
 ${invalid_email_reg}    mail@email
 ${invalid_test_pword_reg}    123456
+
+### --- Login Page Tests Information ---
