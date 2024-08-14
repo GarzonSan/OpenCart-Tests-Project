@@ -23,3 +23,4 @@ End Session
 Open URL to Page
     [Arguments]    ${url_complement}
     Go To    ${base_app_url}${url_complement}
+    Sleep    4
